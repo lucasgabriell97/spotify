@@ -1,4 +1,13 @@
-const songsArray = [
+export type Songs = {
+  image: string;
+  name: string;
+  duration: string;
+  artist: string;
+  audio: string;
+  id: number;
+};
+
+export const songsArray: Songs[] = [
   {
     image: "https://i.scdn.co/image/ab67616d00001e022774b00531d558bc19e12a24",
     name: "Última Saudade - Ao Vivo",

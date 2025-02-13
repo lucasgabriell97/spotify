@@ -1,13 +1,13 @@
 import React from "react";
 
 import { Header } from "./layouts/Header/Header";
-import { Main } from "./layouts/Main/Main";
+import { AppRoutes } from "./routes";
 
 export const App: React.FC = () => {
   return (
     <>
       <Header />
-      <Main />
+      <AppRoutes />
     </>
   );
 };

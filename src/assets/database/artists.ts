@@ -1,4 +1,11 @@
-const artistArray = [
+export type Artist = {
+  id: number;
+  image: string;
+  name: string;
+  banner: string;
+};
+
+export const artistArray: Artist[] = [
   {
     id: 1,
     image: "https://i.scdn.co/image/ab676161000051744dcd8a3bff84cd7703892cf4",
