@@ -1,7 +1,6 @@
-import React from 'react'
+import React from "react";
+import { Main } from "../../layouts/Main/Main";
 
 export const Songs: React.FC = () => {
-  return (
-    <div>Songs</div>
-  )
-}
+  return <Main type="songs" />;
+};
