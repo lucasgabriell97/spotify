@@ -1,0 +1,6 @@
+Passo a passo para construção do back-end
+
+1 - Criar package.json = npm init -y
+2 - Criar Express = npm i express
+3 - Criar arquivo server.js
+4 - Executar arquivo server.js = node ./api/server.js (--watch ./api/server.js)
