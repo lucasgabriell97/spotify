@@ -6,7 +6,7 @@ type SongItemProps = {
   image: string;
   name: string;
   duration: string;
-  _id: number;
+  id: number;
   index: number;
 };
 
@@ -14,11 +14,11 @@ export const SongItem: React.FC<SongItemProps> = ({
   image,
   name,
   duration,
-  _id,
+  id,
   index,
 }) => {
   return (
-    <Link to={`/song/${_id}`} className="song-item">
+    <Link to={`/song/${id}`} className="song-item">
       <div className="song-item__number-album">
         <p>{index + 1}</p>
 

@@ -3,8 +3,8 @@ import "./styles.css";
 import { Link, useParams } from "react-router";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCirclePlay } from "@fortawesome/free-solid-svg-icons";
-import { artistArray } from "../../assets/database/artists";
-import { songsArray } from "../../assets/database/songs";
+import { artistArray } from "../../assets/database/artists.ts";
+import { songsArray } from "../../assets/database/songs.ts";
 
 import { SongList } from "../../components/SongList/SongList";
 
@@ -12,7 +12,7 @@ export const Artist: React.FC = () => {
   const { id } = useParams();
 
   const { name, banner } = artistArray.filter(
-    (currentArtistObj) => currentArtistObj._id === id
+    (currentArtistObj) => currentArtistObj.id === Number(id)
   )[0];
 
   const songsArrayFromArtist = songsArray.filter(
@@ -22,7 +22,7 @@ export const Artist: React.FC = () => {
   const randomIndex = Math.floor(
     Math.random() * (songsArrayFromArtist.length - 1)
   );
-  const randomIdFromArtist = songsArrayFromArtist[randomIndex]._id;
+  const randomIdFromArtist = songsArrayFromArtist[randomIndex].id;
 
   return (
     <div className="artist">

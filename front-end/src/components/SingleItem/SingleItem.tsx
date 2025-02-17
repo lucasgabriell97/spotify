@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCirclePlay } from "@fortawesome/free-solid-svg-icons";
 
 type SingleItemProps = {
-  _id: number;
+  id: number;
   image: string;
   name: string;
   banner?: string;
@@ -15,14 +15,14 @@ type SingleItemProps = {
 };
 
 export const SingleItem: React.FC<SingleItemProps> = ({
-  _id,
+  id,
   image,
   name,
   artist,
   idPath,
 }) => {
   return (
-    <Link to={`${idPath}/${_id}`} className="single-item">
+    <Link to={`${idPath}/${id}`} className="single-item">
       <div className="single-item__div-image-button">
         <div className="single-item__div-image">
           <img

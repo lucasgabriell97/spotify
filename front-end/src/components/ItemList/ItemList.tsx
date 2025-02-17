@@ -41,7 +41,7 @@ export const ItemList: React.FC<ItemListProps> = ({
         {itemsArray
           .filter((currentValue, index) => index < finalItems)
           .map((currentObj) => (
-            <SingleItem key={currentObj._id} idPath={idPath} {...currentObj} />
+            <SingleItem key={currentObj.id} idPath={idPath} {...currentObj} />
           ))}
       </div>
     </div>
