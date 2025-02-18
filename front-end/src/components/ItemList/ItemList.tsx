@@ -2,15 +2,27 @@ import React from "react";
 import "./styles.css";
 import { Link, useLocation } from "react-router";
 
-import { Artist } from "../../assets/database/artists";
-import { Songs } from "../../assets/database/songs";
-
 import { SingleItem } from "../SingleItem/SingleItem";
+
+type Artist = {
+  id: number;
+  image: string;
+  name: string;
+  banner: string;
+};
+
+type Song = {
+  id: number;
+  title: string;
+  artist: string;
+  album: string;
+  duration: string;
+};
 
 type ItemListProps = {
   title: string;
   items: number;
-  itemsArray: (Artist | Songs)[];
+  itemsArray: (Artist | Song)[];
   path: string;
   idPath: string;
 };
