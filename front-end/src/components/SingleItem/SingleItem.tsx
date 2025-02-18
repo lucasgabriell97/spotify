@@ -7,7 +7,7 @@ import { faCirclePlay } from "@fortawesome/free-solid-svg-icons";
 type SingleItemProps = {
   id: number;
   image: string;
-  name: string;
+  name?: string;
   banner?: string;
   duration?: string;
   artist?: string;

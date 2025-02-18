@@ -52,9 +52,18 @@ export const ItemList: React.FC<ItemListProps> = ({
       <div className="item-list__container">
         {itemsArray
           .filter((currentValue, index) => index < finalItems)
-          .map((currentObj) => (
-            <SingleItem key={currentObj.id} idPath={idPath} {...currentObj} />
-          ))}
+          .map((currentObj) =>
+            "image" in currentObj ? (
+              <SingleItem key={currentObj.id} idPath={idPath} {...currentObj} />
+            ) : (
+              <SingleItem
+                key={currentObj.id}
+                idPath={idPath}
+                {...currentObj}
+                image="URL_PADRAO"
+              />
+            )
+          )}
       </div>
     </div>
   );
