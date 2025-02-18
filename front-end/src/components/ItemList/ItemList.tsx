@@ -12,12 +12,13 @@ type Artist = {
 };
 
 type Song = {
-  id: number;
-  title: string;
-  artist: string;
-  album: string;
+  image: string;
+  name: string;
   duration: string;
-};
+  artist: string;
+  audio: string;
+  id: number;
+}
 
 type ItemListProps = {
   title: string;
@@ -51,19 +52,10 @@ export const ItemList: React.FC<ItemListProps> = ({
 
       <div className="item-list__container">
         {itemsArray
-          .filter((currentValue, index) => index < finalItems)
-          .map((currentObj) =>
-            "image" in currentObj ? (
-              <SingleItem key={currentObj.id} idPath={idPath} {...currentObj} />
-            ) : (
-              <SingleItem
-                key={currentObj.id}
-                idPath={idPath}
-                {...currentObj}
-                image="URL_PADRAO"
-              />
-            )
-          )}
+          .filter((_, index) => index < finalItems)
+          .map((currentObj) => (
+            <SingleItem key={currentObj.id} idPath={idPath} {...currentObj} />
+          ))}
       </div>
     </div>
   );

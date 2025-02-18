@@ -1,16 +1,24 @@
 import React from "react";
 import "./styles.css";
-import { Songs } from "../../assets/database/songs";
+
+type Song = {
+  image: string;
+  name: string;
+  duration: string;
+  artist: string;
+  audio: string;
+  id: number;
+}
 
 import { SongItem } from "../SongItem/SongItem";
 
-export const SongList: React.FC<{ songsArray: Songs[] }> = ({ songsArray }) => {
+export const SongList: React.FC<{ songsArray: Song[] }> = ({ songsArray }) => {
   const [items, setItems] = React.useState(5);
 
   return (
     <div className="song-list">
       {songsArray
-        .filter((currentValue, index) => index < items)
+        .filter((_, index) => index < items)
         .map((currentSongObj, index) => (
           <SongItem {...currentSongObj} index={index} key={index} />
         ))}
