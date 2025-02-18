@@ -6,7 +6,7 @@
   <img src="./front-end/src/assets/design/design-preview.png" alt="Imagem do projeto Spotify" />
 </div>
 
-<h4 align="center"><a href="">Clique para visitar o projeto</a></h4>
+<h4 align="center"><a href="https://spotify-cjqu.vercel.app/">Clique para visitar o projeto</a></h4>
 
 ## 📚 Sobre o projeto
 
